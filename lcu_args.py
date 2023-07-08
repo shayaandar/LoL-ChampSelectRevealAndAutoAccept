@@ -7,7 +7,6 @@ import base64
 import regex as re 
 import os
 from lcu_driver import Connector
-from riotwatcher import LolWatcher, ApiError
 import subprocess
 import warnings
 import platform 
