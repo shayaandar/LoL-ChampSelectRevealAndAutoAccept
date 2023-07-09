@@ -59,6 +59,7 @@ class LCU:
         r = requests.get(current_summoner, headers=self.LCU_headers, verify=False)
         r = json.loads(r.text)
         summoner = r['displayName']
+        print(f"Summoner name: {summoner}")
         return summoner
 
     def get_gameflow_phase(self):
@@ -95,7 +96,7 @@ class LCU:
         if gameflow_phase == "ReadyCheck":
             time.sleep(random.randint(1, 3))
             self.accept_queue()
-        time.sleep(random.randint(1, 4))
+        time.sleep(random.randint(5,8))
         if gameflow_phase == 'ChampSelect':
             participants = self.get_champ_select_participants()
             self.get_summoner_stats(participants, self.get_current_summoner())

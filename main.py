@@ -11,6 +11,7 @@ def main():
     except:
         print("Credentials not retrieved, must start client or restart client")
 
+    # Ignore certificate error 
     warnings.filterwarnings('ignore', category=urllib3.exceptions.InsecureRequestWarning)
 
     lcu.set_credentials(credentials[0], credentials[1], credentials[2], credentials[3])
