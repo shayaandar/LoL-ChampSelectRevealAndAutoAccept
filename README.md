@@ -1,4 +1,4 @@
-# LoL-ChampSelectRevealAndAutoAccept
+# League of Legends Auto Queue Acceptor and Champ Select Team Reveal Tool 
 
 This script utilizes the League of Legends LCU (League Client Update) API to automate the acceptance of ready checks during queue. Additionally, it pulls up teammate stats on u.gg for quick reference during champion selection.
 
