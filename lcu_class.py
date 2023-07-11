@@ -1,12 +1,7 @@
 import base64
 import requests
 import json
-import lcu_args
-import time 
-import random 
-import urllib3
 import webbrowser
-import warnings
 
 
 # Class for LCU API 
