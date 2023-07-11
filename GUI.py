@@ -63,6 +63,7 @@ def toggle_execution():
     global running
     running = not running
     if running:
+  
         lcu = lcu_class.LCU()
         lcu.set_region(lcu_args.get_lol_region())  # Set the region
         try:
@@ -76,7 +77,8 @@ def toggle_execution():
         lcu.set_credentials(credentials[0], credentials[1], credentials[2], credentials[3])
         lcu.initialize_LCU()
         lcu.initialize_riot()
-        lcu.get_current_summoner()
+        summoner = lcu.get_current_summoner()
+        print(f"Activated Queue Assist for summoner: {summoner}")
         # Checks game state, auto accepts queue, and auto pulls up u.gg for teammates
         recursive_gameflow_check(lcu)
 

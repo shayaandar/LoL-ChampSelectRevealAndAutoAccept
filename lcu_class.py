@@ -55,7 +55,6 @@ class LCU:
         r = requests.get(current_summoner, headers=self.LCU_headers, verify=False)
         r = json.loads(r.text)
         summoner = r['displayName']
-        print(f"Summoner name: {summoner}")
         return summoner
 
     def get_gameflow_phase(self):
