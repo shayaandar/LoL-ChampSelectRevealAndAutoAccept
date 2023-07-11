@@ -22,8 +22,6 @@ v1.1
 
 ## Future Additions
 
-This script can benefit from the following additions and improvements:
-
 Error Handling: Improve error handling to effectively capture connection errors, handle potential issues in finding the configuration file, and address other possible error scenarios.
 
 Executable or Batch Functionality: Provide a method to package the script as an executable file or a batch file, enabling easy execution without the need for Python installation. This would allow users to run the script with a simple double-click.
