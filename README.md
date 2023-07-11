@@ -12,7 +12,7 @@ This script utilizes the League of Legends LCU (League Client Update) API to aut
 4. Toggle the button to enable the script.
 5. Queue up for a game.
 
-Once the script is toggled on, it will automatically start your queue if you are in a lobby. For ranked lobbies, you must input your position prefernce first. After matchmaking starts, it will accept all ready checks that appear during champion select. Then, following a short delay, it will open u.gg multisearch to display the stats of your teammates for quick reference.
+Once the script is toggled on, it will automatically start your queue if you are in a lobby. For ranked lobbies, you must input your position preference first. After matchmaking starts, it will accept all ready checks that appear during champion select. Then, following a short delay, it will open u.gg multisearch to display the stats of your teammates for quick reference.
 
 ## UPDATES 
 v1.1 
