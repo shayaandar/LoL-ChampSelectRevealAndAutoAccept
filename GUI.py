@@ -15,16 +15,20 @@ import lcu_args
 # Optionality to enable auto accept
 def enable_readycheck():
     if checkbox_var1.get() == 1:
-        lcu_class.enable_ready_check = True
+        enable_ready_check = True
+        return enable_ready_check
     else:
-        lcu_class.enable_ready_check = False
+        enable_ready_check = False
+        return enable_ready_check
 
 # Optionality to enable champ select reveal 
 def enable_champselect():
     if checkbox_var2.get() == 1:
-        lcu_class.enable_champ_select = True
+        enable_champ_select = True
+        return enable_champselect
     else:
-        lcu_class.enable_champ_select = False
+        enable_champ_select = False
+        return enable_champselect
 
 # Recursively check gameflow state and perform API calls based on current state
 def recursive_gameflow_check(lcu: lcu_class.LCU):
@@ -41,7 +45,7 @@ def recursive_gameflow_check(lcu: lcu_class.LCU):
         print("Accepting Queue")
         time.sleep(random.randint(1,3))
         lcu.accept_queue()
-    time.sleep(random.randint(4,7))
+    time.sleep(random.randint(3,6))
     # Champ select reveal 
     if enable_champ_select and gameflow_phase == 'ChampSelect':
         print("Entering champ select: outputting team data")
@@ -63,7 +67,6 @@ def toggle_execution():
         lcu.set_region(lcu_args.get_lol_region())  # Set the region
         try:
             credentials = lcu_args.get_port_and_token()
-            print(credentials)
         except:
             print("Credentials not retrieved, must start client or restart client")
 

@@ -62,19 +62,16 @@ class LCU:
         gameflow_phase = self.LCU_url + "/lol-gameflow/v1/gameflow-phase"
         r = requests.get(gameflow_phase, headers=self.LCU_headers, verify=False)
         r = json.loads(r.text)
-        print(r)
         return r 
 
     def start_matchmaking(self):
         matchmaking_start = self.LCU_url + '/lol-lobby/v2/lobby/matchmaking/search'
         r = requests.post(matchmaking_start, headers=self.LCU_headers, verify=False)
-        print(r)
         return r
     
     def play_again(self):
         play_again = self.LCU_url + '/lol-lobby/v2/play-again'
         r = requests.post(play_again, headers=self.LCU_headers, verify=False)
-        print(r)
         return r
     
     def get_champ_select_participants(self):
