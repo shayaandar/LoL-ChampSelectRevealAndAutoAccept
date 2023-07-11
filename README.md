@@ -16,7 +16,7 @@ Once the script is toggled on, it will automatically start your queue if you are
 
 ## UPDATES 
 v1.1 
-- Checkboxes have been added for auto queue acceptance and champ select reveal so the user can have optionality in these areas
+- Checkboxes have been added for auto queue acceptance and champ select reveal so the user can elect to have one or the other if not both
 - Cosmetic GUI updates
 - Auto matchmaking start functionality was added - once user makes a lobby script will automatically search
 
