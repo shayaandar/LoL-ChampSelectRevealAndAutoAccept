@@ -29,4 +29,5 @@ Enhanced GUI and Customization: Enhance the graphical user interface (GUI) to of
 
 Auto Play Again/Requeue: Extend the script to include an auto play again or requeue feature. This enhancement would enable users to automatically queue up for another game once the current one ends. It simplifies the gameplay experience by eliminating the need for manual interaction between matches.
 
+
 Feel free to explore and customize the script further to meet your specific needs and preferences. Any feedback, contributions, and improvements are welcome.
