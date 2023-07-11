@@ -1,15 +1,7 @@
-import sys
-import requests
-import json
-from time import sleep
 import platform
-import base64
 import regex as re 
 import os
-from lcu_driver import Connector
 import subprocess
-import warnings
-import platform 
 import tempfile 
 
 # Get region and port and token information from user command line output 

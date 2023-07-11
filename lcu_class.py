@@ -4,9 +4,10 @@ import json
 import lcu_args
 import time 
 import random 
-import warnings
 import urllib3
 import webbrowser
+import warnings
+
 
 # Class for LCU API 
 
@@ -66,8 +67,21 @@ class LCU:
         gameflow_phase = self.LCU_url + "/lol-gameflow/v1/gameflow-phase"
         r = requests.get(gameflow_phase, headers=self.LCU_headers, verify=False)
         r = json.loads(r.text)
+        print(r)
         return r 
 
+    def start_matchmaking(self):
+        matchmaking_start = self.LCU_url + '/lol-lobby/v2/lobby/matchmaking/search'
+        r = requests.post(matchmaking_start, headers=self.LCU_headers, verify=False)
+        print(r)
+        return r
+    
+    def play_again(self):
+        play_again = self.LCU_url + '/lol-lobby/v2/play-again'
+        r = requests.post(play_again, headers=self.LCU_headers, verify=False)
+        print(r)
+        return r
+    
     def get_champ_select_participants(self):
         champ_select_participants = self.riot_url + '/chat/v5/participants/champ-select'
         r = requests.get(champ_select_participants, headers=self.riot_headers, verify=False)
@@ -81,7 +95,6 @@ class LCU:
     def accept_queue(self):
         accept_q = self.LCU_url + '/lol-lobby-team-builder/v1/ready-check/accept'
         r = requests.post(accept_q, headers=self.LCU_headers, verify=False)
-        print(r)
         return r
     
     def get_summoner_stats(self,name_list,summoner):
@@ -90,17 +103,3 @@ class LCU:
         url = f"https://u.gg/multisearch?summoners={summoner_list}&region={self.region}"
         webbrowser.open(url)
 
-    # Recursively check gameflow state and perform commands based on state
-    def recursive_gameflow_check(self):
-        gameflow_phase = self.get_gameflow_phase()
-        if gameflow_phase == "ReadyCheck":
-            time.sleep(random.randint(1, 3))
-            self.accept_queue()
-        time.sleep(random.randint(5,8))
-        if gameflow_phase == 'ChampSelect':
-            participants = self.get_champ_select_participants()
-            self.get_summoner_stats(participants, self.get_current_summoner())
-            return "Game found, outputting team data"
-        if gameflow_phase == 'InProgress':
-            return "Game in progress"
-        self.recursive_gameflow_check()
