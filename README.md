@@ -20,6 +20,10 @@ v1.1
 - Cosmetic GUI updates
 - Auto matchmaking start functionality was added - once user makes a lobby script will automatically start searching for a match
 
+v1.2 
+- Fixed issues with checkboxes not operating properly
+- Added executable functionality - still requires user testing
+
 ## Future Additions
 
 Error Handling: Improve error handling to effectively capture connection errors, handle potential issues in finding the configuration file, and address other possible error scenarios.
