@@ -25,10 +25,10 @@ def enable_readycheck():
 def enable_champselect():
     if checkbox_var2.get() == 1:
         enable_champ_select = True
-        return enable_champselect
+        return enable_champ_select
     else:
         enable_champ_select = False
-        return enable_champselect
+        return enable_champ_select
 
 # Recursively check gameflow state and perform API calls based on current state
 def recursive_gameflow_check(lcu: lcu_class.LCU):
