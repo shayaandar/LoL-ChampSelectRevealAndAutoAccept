@@ -1,5 +1,7 @@
 # Queue Assist
 
+VANGUARD MAY BAN FOR USING THIS, USE AT YOUR OWN CAUTION
+
 Queue Assist is a League of Legends auto queue acceptor and champ select team reveal tool.  
 
 This script utilizes the League of Legends LCU (League Client Update) API to automate the acceptance of ready checks during queue as well as auto start queues. Additionally, it pulls up teammate stats on u.gg for quick reference during champion selection.
